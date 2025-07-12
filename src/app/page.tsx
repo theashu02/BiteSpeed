@@ -19,6 +19,7 @@ import ReactFlow, {
   ReactFlowProvider,
 } from "reactflow";
 import "reactflow/dist/style.css";
+import { toast } from "sonner"
 
 import { NodesPanel } from "@/app/components/node-pannel";
 import { SettingsPanel } from "@/app/components/settting-pannel";
@@ -159,7 +160,8 @@ function ChatbotFlowBuilderInner() {
     console.log("Saving flow:", { nodes, edges });
     console.log("Flow saved successfully!");
     setValidationError(null);
-    alert("Flow saved successfully!");
+    // alert("Flow saved successfully!");
+    toast("Flow saved successfully!")
   }, [nodes, edges]);
 
   const selectedNode = selectedNodeId
