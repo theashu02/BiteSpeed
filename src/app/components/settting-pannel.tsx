@@ -5,7 +5,6 @@ import type { Node } from "reactflow";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { nodeRegistry } from "@/lib/node-registry";
 
@@ -54,16 +53,6 @@ export function SettingsPanel({
         <h2 className="text-lg font-semibold text-gray-900">Settings Panel</h2>
       </div>
 
-      {/* Node type indicator */}
-      <Card className="mb-4">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-sm flex items-center gap-2">
-            <nodeConfig.icon className="w-4 h-4" />
-            {nodeConfig.label}
-          </CardTitle>
-        </CardHeader>
-      </Card>
-
       {/* Dynamic settings based on node type */}
       <div className="space-y-4">
         {/* Text Node Settings */}
@@ -80,16 +69,13 @@ export function SettingsPanel({
                 placeholder="Enter the message text..."
                 className="mt-1 min-h-[100px]"
               />
-              <p className="text-xs text-gray-500 mt-1">
-                This text will be sent to users when they reach this node.
-              </p>
             </div>
           </div>
         )}
       </div>
 
       {/* Node information */}
-      <div className="mt-6 p-3 bg-gray-50 rounded-lg">
+      <div className="mt-6 p-3 bg-gray-50 rounded-lg hidden">
         <p className="text-xs text-gray-600">
           <strong>Node ID:</strong> {node.id}
         </p>

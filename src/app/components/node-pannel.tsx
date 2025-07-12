@@ -7,7 +7,7 @@ import { nodeRegistry } from "@/lib/node-registry"
 
 type NodesPanelProps = {}
 
-// NodesPanel component - displays available node types that can be dragged to the flow
+// displays available node types that can be dragged to the flow
 export function NodesPanel({}: NodesPanelProps) {
   const availableNodes = nodeRegistry.getAllNodeTypes()
 
@@ -18,11 +18,6 @@ export function NodesPanel({}: NodesPanelProps) {
 
   return (
     <div className="p-4 h-full">
-      <div className="mb-4">
-        <h2 className="text-lg font-semibold text-gray-900">Nodes Panel</h2>
-        <p className="text-sm text-gray-600 mt-1">Drag and drop nodes to build your chatbot flow</p>
-      </div>
-
       <div className="space-y-3">
         {availableNodes.map((nodeType) => {
           const config = nodeRegistry.getNodeConfig(nodeType)
