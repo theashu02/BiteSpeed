@@ -74,10 +74,10 @@ function ChatbotFlowBuilderInner() {
 
       if (existingEdge) {
         // Remove existing edge before adding new one (source handle constraint)
-        setEdges((eds) => eds.filter((edge) => edge.id !== existingEdge.id));
+        setEdges((eds: any) => eds.filter((edge : any) => edge.id !== existingEdge.id));
       }
 
-      setEdges((eds) => addEdge(params, eds));
+      setEdges((eds: any) => addEdge(params, eds));
       setValidationError(null);
     },
     [edges, setEdges]
@@ -96,8 +96,8 @@ function ChatbotFlowBuilderInner() {
   // Update node data
   const updateNodeData = useCallback(
     (nodeId: string, newData: any) => {
-      setNodes((nds) =>
-        nds.map((node) =>
+      setNodes((nds: any) =>
+        nds.map((node: any) =>
           node.id === nodeId
             ? { ...node, data: { ...node.data, ...newData } }
             : node
@@ -141,7 +141,7 @@ function ChatbotFlowBuilderInner() {
         data: { ...nodeConfig.defaultData },
       };
 
-      setNodes((nds) => [...nds, newNode]);
+      setNodes((nds: any) => [...nds, newNode]);
       setValidationError(null);
     },
     [screenToFlowPosition, setNodes]
