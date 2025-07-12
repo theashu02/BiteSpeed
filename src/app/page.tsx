@@ -31,15 +31,17 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Initial nodes and edges
-const initialNodes: Node[] = [
-  {
-    id: "1",
-    type: "textNode",
-    position: { x: 250, y: 100 },
-    data: { text: "Welcome to our chatbot!" },
-  },
-];
+// Initial nodes and edges for testing purpose
+// const initialNodes: Node[] = [
+//   {
+//     id: "1",
+//     type: "textNode",
+//     position: { x: 250, y: 100 },
+//     data: { text: "Welcome to our chatbot!" },
+//   },
+// ];
+
+const initialNodes: Node[] = []
 
 const initialEdges: Edge[] = [];
 
