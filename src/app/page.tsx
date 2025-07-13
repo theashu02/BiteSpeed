@@ -186,7 +186,7 @@ function ChatbotFlowBuilderInner() {
           onDragOver={onDragOver}
           nodeTypes={nodeTypes}
           fitView
-          className="bg-gray-50"
+          className="bg-[#f4f4f4] cursor-pointer"
         >
           <Background />
           <Controls />
@@ -222,7 +222,7 @@ function ChatbotFlowBuilderInner() {
       </div>
 
       {/* Right sidebar */}
-      <div className="w-80 border-l bg-white">
+      <div className="w-80 border-l bg-gray-50">
         {selectedNode ? (
           <SettingsPanel
             node={selectedNode}
